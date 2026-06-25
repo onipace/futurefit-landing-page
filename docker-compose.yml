@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  futurefit-web:
+    build: .
+    container_name: futurefit-landing
+    restart: unless-stopped
+    ports:
+      - "3100:80"
+    environment:
+      - VIRTUAL_HOST=futurefit.ph,www.futurefit.ph
